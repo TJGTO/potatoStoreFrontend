@@ -11,6 +11,9 @@ const useStyles = makeStyles({
         height: "36px",
         opacity: "1",
     },
+    signInButton: {
+        background:"linear-gradient(90deg, #6B59BE 0%, #4D7EB7 51%, #3F4A8C 100%)"
+    }
   });
 
 const LoginPage=()=>{
