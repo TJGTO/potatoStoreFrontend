@@ -34,6 +34,7 @@ const LoginPage=()=>{
                     <TextField 
                         size="small" 
                         className={classes.inputBox} 
+                        type="password"
                         placeholder="Enter password"
                     />
                 </div>
