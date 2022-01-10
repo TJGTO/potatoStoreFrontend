@@ -1,7 +1,17 @@
-.styleLogin {
-    color: DodgerBlue;
-    background-color: blueviolet;
-    padding: 40px;
-    font-family: Arial;
-    text-align: center;
+
+  .splitLeft {
+      height: 100%;
+      width: 60%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      background-color: violet;
+  }
+
+  .splitRight {
+      height: 100%;
+      width: 40%;
+      right: 0;
+      position: fixed;
+      top: 0;
   }
