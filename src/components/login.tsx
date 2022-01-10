@@ -29,6 +29,14 @@ const LoginPage=()=>{
                         placeholder="Enter your email"
                     />
                 </div>
+                <div className = {styles.passwordinputboxdiv}>
+                    <p style={{fontWeight: "bold"}}>Password</p>
+                    <TextField 
+                        size="small" 
+                        className={classes.inputBox} 
+                        placeholder="Enter password"
+                    />
+                </div>
             </div>
         </>
     ) 
