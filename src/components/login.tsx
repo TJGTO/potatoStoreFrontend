@@ -4,6 +4,7 @@ import { makeStyles } from '@mui/styles';
 import TextField from '@mui/material/TextField';
 import styles from '../Styles/login.module.css';
 import logo from '../Assets/Images/potatoes-1585060.jpg';
+import { width } from '@mui/system';
 
 const useStyles = makeStyles({
     inputBox: {
@@ -12,7 +13,9 @@ const useStyles = makeStyles({
         opacity: "1",
     },
     signInButton: {
-        background:"linear-gradient(90deg, #6B59BE 0%, #4D7EB7 51%, #3F4A8C 100%)"
+        background:"linear-gradient(90deg, #6B59BE 0%, #4D7EB7 51%, #3F4A8C 100%)",
+        width: "100%",
+        textTransform: "none",
     }
   });
 
@@ -40,6 +43,17 @@ const LoginPage=()=>{
                         type="password"
                         placeholder="Enter password"
                     />
+                </div>
+                <div className = {styles.buttoninputboxdiv}>
+                    <Button 
+                        variant="contained" 
+                        className = {classes.signInButton}
+                    >
+                        Sign in
+                    </Button>
+                </div>
+                <div className = {styles.signuplinkbox}>
+                    <p>Don't have an account? <a href = "#">Sign up</a></p>
                 </div>
             </div>
         </>
