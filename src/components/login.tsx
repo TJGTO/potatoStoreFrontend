@@ -1,9 +1,10 @@
-import React,{useState,useRef} from 'react';
+import React,{useState} from 'react';
 import Button from '@mui/material/Button';
 import { makeStyles } from '@mui/styles';
 import TextField from '@mui/material/TextField';
 import styles from '../Styles/login.module.css';
 import logo from '../Assets/Images/potatoes-1585060.jpg';
+import {loginWithEmailAndPassword} from '../services/JWTlogin';
 import CircularProgress from '@mui/material/CircularProgress';
 
 const useStyles = makeStyles({
@@ -29,7 +30,19 @@ const useStyles = makeStyles({
 const LoginPage=()=>{
 
     const classes = useStyles();
-    const [loading , setloading] = useState(true);
+    const [loading , setloading] = useState(false);
+    const [email , setemail] = useState('');
+    const [password , setpassword] = useState('');
+
+    function authorization(){
+        setloading(true);
+        loginWithEmailAndPassword(email,password).then((response) => {
+           setloading(false);
+           window.location.href = window.location.origin +"/home";
+        }).catch((error)=>{
+            setloading(false);
+        });
+    }
 
     return(
         <>
@@ -43,6 +56,7 @@ const LoginPage=()=>{
                         size="small" 
                         className={classes.inputBox} 
                         placeholder="Enter your email"
+                        onChange={(e)=>setemail(e.target.value)}
                     />
                 </div>
                 <div className = {styles.passwordinputboxdiv}>
@@ -52,6 +66,7 @@ const LoginPage=()=>{
                         className={classes.inputBox} 
                         type="password"
                         placeholder="Enter password"
+                        onChange={(e)=>setpassword(e.target.value)}
                     />
                 </div>
                 <div className = {styles.buttoninputboxdiv}>
@@ -59,6 +74,7 @@ const LoginPage=()=>{
                         <Button 
                             variant="contained" 
                             className = {classes.signInButton}
+                            onClick = {authorization}
                         >
                             Sign in
                         </Button>
