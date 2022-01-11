@@ -33,14 +33,19 @@ const LoginPage=()=>{
     const [loading , setloading] = useState(false);
     const [email , setemail] = useState('');
     const [password , setpassword] = useState('');
+    const [error , seterror] = useState(false);
+    const [errormessage , seterrormessage] = useState('');
 
     function authorization(){
         setloading(true);
         loginWithEmailAndPassword(email,password).then((response) => {
-           setloading(false);
-           window.location.href = window.location.origin +"/home";
+            setloading(false);
+            window.location.href = window.location.origin +"/home";
+            seterror(false);
         }).catch((error)=>{
             setloading(false);
+            seterror(true);
+            seterrormessage("Authorization is unsuccessfull");
         });
     }
 
@@ -50,6 +55,12 @@ const LoginPage=()=>{
                 <img src = {logo} style={{height:"100%",width:"100%"}} alt = "sack of potatoes"></img>
             </div>
             <div className= {styles.splitRight}>
+                {
+                    error && 
+                    <div className = {styles.errormessageboxdiv}>
+                        <p style={{color:"red"}}>{errormessage}</p>
+                    </div>
+                }
                 <div className = {styles.emailinputboxdiv}>
                     <p style={{fontWeight: "bold"}}>Email</p>
                     <TextField 

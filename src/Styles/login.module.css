@@ -1,19 +1,24 @@
 
   .splitLeft {
-      height: 100%;
-      width: 60%;
-      left: 0;
-      position: fixed;
-      top: 0;
+    height: 100%;
+    width: 60%;
+    left: 0;
+    position: fixed;
+    top: 0;
   }
 
   .splitRight {
-      height: 100%;
-      width: 40%;
-      right: 0;
-      position: fixed;
-      background-color: #fffffa;
-      top: 0;
+    height: 100%;
+    width: 40%;
+    right: 0;
+    position: fixed;
+    background-color: #fffffa;
+    top: 0;
+  }
+  .errormessageboxdiv {
+    top: 200px;
+    position: absolute; 
+    left:28%
   }
   .emailinputboxdiv {
     margin-left:15%;
