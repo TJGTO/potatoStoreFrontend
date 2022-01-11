@@ -1,0 +1,53 @@
+
+  .splitLeft {
+    height: 100%;
+    width: 60%;
+    left: 0;
+    position: fixed;
+    top: 0;
+  }
+
+  .splitRight {
+    height: 100%;
+    width: 40%;
+    right: 0;
+    position: fixed;
+    background-color: #fffffa;
+    top: 0;
+  }
+  .errormessageboxdiv {
+    top: 200px;
+    position: absolute; 
+    left:28%
+  }
+  .emailinputboxdiv {
+    margin-left:15%;
+    margin-right:15%;
+    top: 230px;
+    position: absolute;
+    width: 70%;
+  }
+  .passwordinputboxdiv {
+    margin-left:15%;
+    margin-right:15%;
+    top: 330px;
+    position: absolute;
+    width: 70%;
+  }
+
+  .buttoninputboxdiv {
+    margin-left:15%;
+    margin-right:15%;
+    top: 460px;
+    position: absolute;
+    width: 70%;
+  }
+
+  .signuplinkbox {
+    margin-left:28%;
+    margin-right:25%;
+    top: 520px;
+    position: absolute;
+    width: 70%;
+  }
+
