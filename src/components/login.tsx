@@ -36,6 +36,15 @@ const LoginPage=()=>{
     const [error , seterror] = useState(false);
     const [errormessage , seterrormessage] = useState('');
 
+    function validate(){
+        if(!validateEmail(email)){
+            seterror(true);
+            seterrormessage("Please enter a valid email id");
+            return;
+        }
+        authorization();
+    }
+
     function authorization(){
         setloading(true);
         loginWithEmailAndPassword(email,password).then((response) => {
@@ -48,7 +57,11 @@ const LoginPage=()=>{
             seterrormessage("Authorization is unsuccessfull");
         });
     }
-
+    const validateEmail = (email:string) =>{
+        return email.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+    };
     return(
         <>
             <div className= {styles.splitLeft}>
@@ -85,7 +98,7 @@ const LoginPage=()=>{
                         <Button 
                             variant="contained" 
                             className = {classes.signInButton}
-                            onClick = {authorization}
+                            onClick = {validate}
                         >
                             Sign in
                         </Button>
