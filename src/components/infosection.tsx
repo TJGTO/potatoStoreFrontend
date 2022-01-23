@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from '.././globalStyles';
 import Button from '@mui/material/Button';
 import { makeStyles } from '@mui/styles';
-import InfoSecImg from '../Assets/Images/potatoes-1585060-removebg-preview.png';
+import InfoSecImg from '../Assets/Images/istockphoto-496359598-170667a-removebg-preview.png';
 import {
   InfoSec,
   InfoRow,
