@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from './navbar';
 import LinkBar from './linkbar';
 import InfoSection from './infosection';
-import Divider from '@mui/material/Divider';
+import ProductArea from './ProductArea';
 
 function HomePage(){
    
@@ -10,8 +10,8 @@ function HomePage(){
         <>
             <NavBar/>
             <LinkBar/>
-            <Divider/>
             <InfoSection/>
+            <ProductArea/>
         </>
     )
 }

@@ -7,8 +7,9 @@ export const Link = styled.nav`
   width:100%;
   font-size: 1.2rem;
   position: sticky;
-  top: 0;
+  top:60px;
   z-index: 999;
+  border-bottom: 1px solid black;
 `;
 export const LinkMenu = styled.div`
   display:flex;
